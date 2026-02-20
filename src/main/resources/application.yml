@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/webflux_hex_db
+  main:
+    web-application-type: reactive
+  application:
+    name: webflux-ddd-hexagonal
+
+logging:
+  level:
+    root: INFO
+    org.springframework.data.mongodb.core.ReactiveMongoTemplate: DEBUG
