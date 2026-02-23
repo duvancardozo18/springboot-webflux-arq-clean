@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: ${SPRING_DATA_MONGODB_URI:mongodb://mongodb:27017/webflux_hex_db}
+      uri: mongodb://mongodb:27017/webflux_hex_db
   main:
     web-application-type: reactive
   application:

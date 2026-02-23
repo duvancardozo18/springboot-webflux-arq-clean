@@ -2,7 +2,8 @@ version: '3.8'
 
 services:
   mongodb:
-    image: mongo:7.0
+    image: mongo:4.4
+    #image: mongo:7.0
     container_name: webflux-mongodb
     restart: always
     ports:
@@ -15,7 +16,8 @@ services:
     networks:
       - webflux-network
     healthcheck:
-      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/webflux_hex_db --quiet
+      test: ["CMD", "mongo", "--eval", "db.runCommand('ping').ok"]
+      #test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/webflux_hex_db --quiet
       interval: 10s
       timeout: 5s
       retries: 5
