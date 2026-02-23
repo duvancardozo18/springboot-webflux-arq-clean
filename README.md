@@ -23,12 +23,7 @@ docker-compose up -d
 
 # Ver los logs
 docker-compose logs -f
-
-La aplicación estará disponible en `http://localhost:8080` y MongoDB en `localhost:27017`.
-
-
-
----
+```
 
 ## Arquitectura
 
