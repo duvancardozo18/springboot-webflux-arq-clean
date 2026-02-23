@@ -11,19 +11,7 @@ Aplicación reactiva desarrollada con Spring Boot WebFlux implementando Domain-D
 
 ---
 
-## Ejecución con Docker
 
-### Usando Docker Compose (Recomendado)
-
-La forma más rápida de ejecutar la aplicación junto con MongoDB:
-
-```bash
-# Construir y levantar todos los servicios
-docker-compose up -d
-
-# Ver los logs
-docker-compose logs -f
-```
 
 ## Arquitectura
 
@@ -45,22 +33,11 @@ hexagonal/
     └── config/                 # Configuración
 ```
 
-## Configuración
 
-La aplicación se ejecuta por defecto en el puerto `8080` y se conecta a una base de datos MongoDB local:
-
-```yaml
-server:
-  port: 8080
-  
-spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/webflux_hex_db
-```
 
 ## Ejecución
 
+Opcion 1 
 ```bash
 # Usando Maven Wrapper (Windows)
 .\mvnw.cmd spring-boot:run
@@ -70,8 +47,21 @@ spring:
 
 # O usando Maven instalado
 mvn spring-boot:run
+
+NOTA: En este caso configurar yml
 ```
 
+
+
+Opcion 2 - Docker Compose:
+
+```bash
+# Construir y levantar todos los servicios
+docker-compose up -d
+
+# Ver los logs
+docker-compose logs -f
+```
 ### API Endpoints - Productos
  
 Base URL: `http://localhost:8080`
